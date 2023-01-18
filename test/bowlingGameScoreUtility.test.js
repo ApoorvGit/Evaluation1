@@ -7,6 +7,8 @@ describe('Bowling Score calculator', ()=>{
             expect(result[3]).toEqual(90);
             //expect(()=>divideAbyB(10,0)).toThrow('Division by Zero is not allowed');
         });
-        
+        it('should throw an error if number of frames are more than 10'){
+            expect(()=>scoreCalculator([100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10, 10])).toThrow('Number of frames more than 10');
+        }
     });
 })
